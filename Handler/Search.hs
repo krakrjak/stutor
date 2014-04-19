@@ -22,4 +22,4 @@ searchForm :: Html -> MForm Handler (FormResult Text, Widget)
 searchForm = renderDivs $ areq (searchField True) "Search" Nothing
 
 getResults::Text -> Handler [Result]
-getResults qstring = return [ Result "Joe Brown", Result "Jessica Simpson" ]
+getResults qstring = return [ Result {resultTitle="Joe Brown"}, Result {resultTitle="Jessica Simpson"} ]

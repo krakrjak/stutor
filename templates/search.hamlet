@@ -1,0 +1,9 @@
+$if null searchResults
+  <p>No Results Found
+$else
+  <table>
+    <tr>
+      <td>Name
+        $forall Result title <- searchResults
+          <tr>
+            <td>#{title}
